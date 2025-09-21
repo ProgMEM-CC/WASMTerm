@@ -31,6 +31,16 @@
         { type: "dir", path: "/data", dev: dataDevice },
         { type: "devs", path: "/dev" },
       ],
+      networkInterface: {
+        authKey: "tskey-auth-k6U8VMEe8z11CNTRL-hiQRo92Z9nieq6wE4K1TniXqauCxaf5F",
+        controlUrl: "https://progmem.tailb50607.ts.net/",
+        stateUpdateCb: (state) => {
+      console.log("Network state changed to:", state);
+    },
+    netmapUpdateCb: (map) => {
+      console.log("Network mapping updated:", map);
+    },
+  },
     });
 
     // Interact with a console
@@ -74,4 +84,5 @@
 
 
 </html>
+
 
